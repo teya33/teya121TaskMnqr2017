@@ -1,5 +1,6 @@
 package com.hsarme.teya.teya121taskmnqr2017;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
     }
 
     @Override
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.mnItemScreen1:
-                Toast.makeText(getBaseContext(), "Hi...Screen1", Toast.LENGTH_LONG).show();
+                Intent i=new Intent(getBaseContext(),
                 break;
 
             case R.id.mnItemScreen2:
