@@ -21,23 +21,33 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId())
         {
             case R.id.mnItemScreen1:
-                Intent i=new Intent(getBaseContext(),
+                Toast.makeText(getBaseContext(), "Hi...Screen1", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this,Screen.class);
+                startActivity(intent);
                 break;
 
             case R.id.mnItemScreen2:
             Toast.makeText(getBaseContext(), "Hi...Screen2", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(this,Screen.class);
+                startActivity(i);
             break;
             case R.id.mnItemScreen3:
             Toast.makeText(getBaseContext(), "Hi...Screen3", Toast.LENGTH_LONG).show();
+                Intent in = new Intent(this,Screen.class);
+                startActivity(in);
             break;
             case R.id.mnItemScreen4:
             Toast.makeText(getBaseContext(), "Hi...Screen4", Toast.LENGTH_LONG).show();
+                Intent intent1 = new Intent(this,Screen.class);
+                startActivity(intent1);
             break;
         }
         return true;
