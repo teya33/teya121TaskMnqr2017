@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      {
          Calendar c= Calendar.getInstance();
          int year=c.get(Calendar.YEAR);
-         int moonth=c.get(Calendar.MONTH);
+         int month=c.get(Calendar.MONTH);
           int day=c.get(Calendar.DAY_OF_MONTH);
          //
            final DatePickerDialog.OnDateSetListener dateListener=new DatePickerDialog.OnDateSetListener() {
@@ -90,12 +90,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth)
              {
                  tvshowDate.setText(year+"/"+month+"/"+dayOfMonth);
-                 DatePickerDialog datePickerDialog=new DatePickerDialog(this,);
              }
          };
-         {
+         DatePickerDialog datePickerDialog=new DatePickerDialog(this,dateListener,year,month,day);
 
-         }
+
 
 
      }
