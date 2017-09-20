@@ -1,5 +1,6 @@
 package com.hsarme.teya.teya121taskmnqr2017;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -75,10 +78,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view)
     {
-     if (view==btnDate)
+      if (view==btnDate)
      {
          Calendar c= Calendar.getInstance();
+         int year=c.get(Calendar.YEAR);
+         int moonth=c.get(Calendar.MONTH);
+          int day=c.get(Calendar.DAY_OF_MONTH);
+         //
+           final DatePickerDialog.OnDateSetListener dateListener=new DatePickerDialog.OnDateSetListener() {
+             @Override
+             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth)
+             {
+                 tvshowDate.setText(year+"/"+month+"/"+dayOfMonth);
+                 DatePickerDialog datePickerDialog=new DatePickerDialog(this,);
+             }
+         };
+         {
+
+         }
+
+
      }
+        if (view==btnTime)
+        {
+
+
+        }
 
     }
 }
